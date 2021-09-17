@@ -30,7 +30,9 @@ public class Main {
             }
             cities.add(c);
         }
-        
+        cities.forEach(c -> {
+           c.print(); 
+        });       
         } catch (IOException e) {
             e.printStackTrace();
         }
