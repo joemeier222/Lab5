@@ -32,7 +32,11 @@ public class Main {
         }
         cities.forEach(c -> {
            c.print(); 
-        });       
+        });
+        
+        cities.forEach(c -> {
+           c.write(); 
+        });        
         } catch (IOException e) {
             e.printStackTrace();
         }
