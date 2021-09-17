@@ -1,0 +1,10 @@
+Austin,102,Waco,195,Dallas
+Stephenville,106,Dallas,89,Waco
+Houston,185,Waco,162,Austin
+San Antonio,80,Austin,274,Dallas
+Fort Worth,33,Dallas,262,Houston
+Dallas,239,Houston,196,Austin
+Waco,102,Austin,181,San Antonio
+Lubbock,385,San Antonio,261,Stephenville
+Corpus Christi,380,Stephenville,300,Waco
+Galveston,242,Waco,219,Austin
