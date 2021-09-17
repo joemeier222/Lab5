@@ -1,12 +1,16 @@
 package tarleton.lab5;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  *
- * @author Joseph Meier
+ * @author Joe Meier
  */
 public class City implements Comparable<City> {
     private final String name;
@@ -58,6 +62,18 @@ public class City implements Comparable<City> {
         return this.name.compareTo(o.name);
     }
     
-    
+    public void write() {
+        try (PrintWriter out = new PrintWriter(
+            new OutputStreamWriter(
+                new FileOutputStream("output.txt", true),"UTF-8"))) {
+                out.printf("%s",this.name);
+                roads.forEach(r -> {
+                    out.printf(",%s,%s", Integer.toString(r.getLength()),r.getDest());
+                 });
+                out.println();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }    
     
 }
